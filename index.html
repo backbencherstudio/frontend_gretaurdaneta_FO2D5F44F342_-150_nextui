@@ -5,139 +5,682 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- ✅ Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-gray-100 text-gray-900">
+  <body class="text-gray-900">
     <!-- ✅ Navbar -->
-    <nav class="bg-white shadow py-[20px] lg:py-[24px] px-[16px] lg:px-[60px]  flex justify-between items-center">
-     <h1 class=" justify-start text-indigo-950 text-2xl md:text-4xl font-normal font-Montserrat leading-7 md:leading-10">JP AEROSPARES</h1>
-        <ul class="hidden md:flex gap-6  md:flex-row flex-col ">
-          <li><a href="#" class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950">Home</a></li>
-          <li><a href="#services" class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950">Services</a></li>
-          <li><a href="#about" class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950">About</a></li>
-          <li><a href="#contact" class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950">Contact</a></li>
+    <section id="navbar" class="bg-white">
+      <nav
+        class="max-w-[1440px] mx-auto py-[20px] md:py-[24px] px-[16px] md:px-[60px] flex justify-between items-center"
+      >
+        <h1
+          class="justify-start text-indigo-950 text-2xl md:text-4xl font-normal font-Montserrat leading-7 md:leading-10"
+        >
+          JP AEROSPARES
+        </h1>
+        <ul class="hidden md:flex gap-6 md:flex-row flex-col">
+          <li>
+            <a
+              href="#"
+              class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#whatWeOffer"
+              class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950"
+              >Contact</a
+            >
+          </li>
         </ul>
-        <div class="hidden md:flex gap-[16px] md:flex-row flex-col  ">
+        <div class="hidden md:flex gap-[16px] md:flex-row flex-col">
           <button class="btn btn-basic">LOGIN</button>
           <button class="btn btn-secondery text-nowrap">SIGN UP</button>
-        </div> 
-        <div class="  flex md:hidden flex justify-between items-center gap-[24px]">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-            <path d="M21.0008 21.4998L15.8038 16.3028M15.8038 16.3028C17.2104 14.8962 18.0006 12.9885 18.0006 10.9993C18.0006 9.01011 17.2104 7.10238 15.8038 5.69581C14.3972 4.28923 12.4895 3.49902 10.5003 3.49902C8.51108 3.49902 6.60336 4.28923 5.19678 5.69581C3.79021 7.10238 3 9.01011 3 10.9993C3 12.9885 3.79021 14.8962 5.19678 16.3028C6.60336 17.7094 8.51108 18.4996 10.5003 18.4996C12.4895 18.4996 14.3972 17.7094 15.8038 16.3028Z" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </div>
+        <div
+          class="flex md:hidden flex justify-between items-center gap-[24px]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+          >
+            <path
+              d="M21.0008 21.4998L15.8038 16.3028M15.8038 16.3028C17.2104 14.8962 18.0006 12.9885 18.0006 10.9993C18.0006 9.01011 17.2104 7.10238 15.8038 5.69581C14.3972 4.28923 12.4895 3.49902 10.5003 3.49902C8.51108 3.49902 6.60336 4.28923 5.19678 5.69581C3.79021 7.10238 3 9.01011 3 10.9993C3 12.9885 3.79021 14.8962 5.19678 16.3028C6.60336 17.7094 8.51108 18.4996 10.5003 18.4996C12.4895 18.4996 14.3972 17.7094 15.8038 16.3028Z"
+              stroke="#2A2A2A"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-            <path d="M3 18.5V16.5H21V18.5H3ZM3 13.5V11.5H21V13.5H3ZM3 8.5V6.5H21V8.5H3Z" fill="#2A2A2A"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+          >
+            <path
+              d="M3 18.5V16.5H21V18.5H3ZM3 13.5V11.5H21V13.5H3ZM3 8.5V6.5H21V8.5H3Z"
+              fill="#2A2A2A"
+            />
           </svg>
         </div>
-        <div class="  hidden absolute z-50 right-0 top-0 h-screen w-screen bg-[#0F10537A]" >
-          <div class="flex   md:hidden flex-col gap-[48px] absolute z-50 right-0 top-0 h-screen w-[75%] p-5 rounded-xl bg-white items-center ">
-            <ul class="flex gap-[24px]  md:flex-row flex-col items-center mt-[69px]">
-              <li><a href="#" class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950">Home</a></li>
-              <li><a href="#services" class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950">Services</a></li>
-              <li><a href="#about" class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950">About</a></li>
-              <li><a href="#contact" class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950">Contact</a></li>
+        <div
+          class="hidden absolute z-50 right-0 top-0 h-screen w-screen bg-[#0F10537A]"
+        >
+          <div
+            class="flex md:hidden flex-col gap-[48px] absolute z-50 right-0 top-0 h-screen w-[75%] p-5 rounded-xl bg-white items-center"
+          >
+            <ul
+              class="flex gap-[24px] md:flex-row flex-col items-center mt-[69px]"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#whatWeOffer"
+                  class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#whyChooseJP"
+                  class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950"
+                  >Contact</a
+                >
+              </li>
             </ul>
-            <div class=" flex gap-[16px] md:flex-row flex-col  ">
+            <div class="flex gap-[16px] md:flex-row flex-col">
               <button class="btn btn-basic">LOGIN</button>
               <button class="btn btn-secondery text-nowrap">SIGN UP</button>
             </div>
           </div>
         </div>
-     </nav>
+      </nav>
+    </section>
 
     <!-- ✅ Hero Section -->
-     
-<div class="flex justify-between gap-[48px] py-[64px] md:py-[60px]">
-  <div class="flex flex-col gap-[48px]">
-    <div class="self-stretch justify-start"><span class="text-neutral-800 text-6xl font-bold font-Montserrat capitalize leading-[67.20px]">Trusted Supplier of </span><span class="text-indigo-950 text-6xl font-bold font-Montserrat capitalize leading-[67.20px]">aircraft parts</span></div>
-    <div class=" flex gap-[16px] md:flex-row flex-col w-fit">
-      <button class="btn btn-secondery text-nowrap">Request a Quote</button>
-      <button class="btn btn-basic flex gap-[10px]">
-        <svg      width="24"   height="24"  viewBox="0 0 24 24"  fill="none"  xmlns="http://www.w3.org/2000/svg"  > <path  d="M19.0508 4.91005C18.1338 3.98416 17.0418 3.25002 15.8383 2.75042C14.6348 2.25081 13.3439 1.99574 12.0408 2.00005C6.58078 2.00005 2.13078 6.45005 2.13078 11.9101C2.13078 13.6601 2.59078 15.3601 3.45078 16.8601L2.05078 22.0001L7.30078 20.6201C8.75078 21.4101 10.3808 21.8301 12.0408 21.8301C17.5008 21.8301 21.9508 17.3801 21.9508 11.9201C21.9508 9.27005 20.9208 6.78005 19.0508 4.91005ZM12.0408 20.1501C10.5608 20.1501 9.11078 19.7501 7.84078 19.0001L7.54078 18.8201L4.42078 19.6401L5.25078 16.6001L5.05078 16.2901C4.22833 14.9771 3.79171 13.4593 3.79078 11.9101C3.79078 7.37005 7.49078 3.67005 12.0308 3.67005C14.2308 3.67005 16.3008 4.53005 17.8508 6.09005C18.6184 6.85392 19.2267 7.7626 19.6404 8.76338C20.0541 9.76417 20.265 10.8371 20.2608 11.9201C20.2808 16.4601 16.5808 20.1501 12.0408 20.1501ZM16.5608 13.9901C16.3108 13.8701 15.0908 13.2701 14.8708 13.1801C14.6408 13.1001 14.4808 13.0601 14.3108 13.3001C14.1408 13.5501 13.6708 14.1101 13.5308 14.2701C13.3908 14.4401 13.2408 14.4601 12.9908 14.3301C12.7408 14.2101 11.9408 13.9401 11.0008 13.1001C10.2608 12.4401 9.77078 11.6301 9.62078 11.3801C9.48078 11.1301 9.60078 11.0001 9.73078 10.8701C9.84078 10.7601 9.98078 10.5801 10.1008 10.4401C10.2208 10.3001 10.2708 10.1901 10.3508 10.0301C10.4308 9.86005 10.3908 9.72005 10.3308 9.60005C10.2708 9.48005 9.77078 8.26005 9.57078 7.76005C9.37078 7.28005 9.16078 7.34005 9.01078 7.33005H8.53078C8.36078 7.33005 8.10078 7.39005 7.87078 7.64005C7.65078 7.89005 7.01078 8.49005 7.01078 9.71005C7.01078 10.9301 7.90078 12.1101 8.02078 12.2701C8.14078 12.4401 9.77078 14.9401 12.2508 16.0101C12.8408 16.2701 13.3008 16.4201 13.6608 16.5301C14.2508 16.7201 14.7908 16.6901 15.2208 16.6301C15.7008 16.5601 16.6908 16.0301 16.8908 15.4501C17.1008 14.8701 17.1008 14.3801 17.0308 14.2701C16.9608 14.1601 16.8108 14.1101 16.5608 13.9901Z" fill="#2A2A2A" /> </svg>
-        <p>WhatsApp Us</p>
-      </button>
-    </div>
-  </div>
-  <div class="relative  flex-1 ">
-    <div class="w-24 h-14 bg-blue-400/50"></div>
-    <img class="w-64 h-60" src="assets/e4d2f40431e2e5529ab2bfee6ca016746b936072.jpg" />
-    <img class="w-48 h-72" src="assets/82b37d5ffa13c74a67f34cc333c302bba39191ad.jpg" />
-    <div class="w-44 h-28 bg-cyan-800/10"></div>
-  </div>
-</div>
-    <section
-      class="h-screen theme-div flex flex-col justify-center items-center text-center"
-    >
-      <h2 class="text-4xl md:text-6xl font-bold mb-4">
-        Welcome to Our Landing Page
-      </h2>
-      <p class="text-lg md:text-xl max-w-xl">
-        We create amazing experiences for your business with modern UI design
-        and development.
-      </p>
-      <a
-        href="#contact"
-        class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700"
-        >Get Started</a
-      >
-    </section>
-
-    <!-- ✅ About Section -->
-    <section id="about" class="py-20 px-6 md:px-20 bg-white">
-      <h3 class="text-3xl font-bold mb-6">About Us</h3>
-      <p class="text-gray-600 max-w-2xl">
-        We are a creative agency specializing in design and development. Our
-        mission is to deliver high-quality, user-focused products.
-      </p>
-    </section>
-
-    <!-- ✅ Services Section -->
-    <section id="services" class="py-20 px-6 md:px-20 bg-gray-50">
-      <h3 class="text-3xl font-bold mb-6 text-center">Our Services</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 shadow rounded-lg text-center">
-          <h4 class="text-xl font-semibold mb-3">Web Design</h4>
-          <p class="text-gray-600">
-            Modern, responsive, and user-friendly web design.
-          </p>
-        </div>
-        <div class="bg-white p-6 shadow rounded-lg text-center">
-          <h4 class="text-xl font-semibold mb-3">Development</h4>
-          <p class="text-gray-600">Scalable and secure web applications.</p>
-        </div>
-        <div class="bg-white p-6 shadow rounded-lg text-center">
-          <h4 class="text-xl font-semibold mb-3">Branding</h4>
-          <p class="text-gray-600">Strong brand identity for your business.</p>
+    <section id="hero" class="bg-white">
+      <div class="max-w-[1440px] mx-auto">
+        <div
+          class="bg-gray-100 flex flex-col-reverse md:flex-row justify-start md:justify-between gap-[48px] mx-[16px] md:mx-[60px] mt-[10px] px-[16px] md:px-[60px] py-[64px] md:py-[60px]"
+        >
+          <!-- left typograph  -->
+          <div class="flex flex-col justify-center gap-[48px] w-full">
+            <div class="justify-start">
+              <span
+                class="text-neutral-800 text-6xl font-bold font-Montserrat capitalize leading-[67.20px]"
+                >Trusted Supplier of </span
+              ><span
+                class="text-indigo-950 text-6xl font-bold font-Montserrat capitalize leading-[67.20px]"
+                >aircraft parts</span
+              >
+            </div>
+            <div class="flex gap-[16px] md:flex-row flex-col w-fit">
+              <button class="btn btn-secondery text-nowrap">
+                Request a Quote
+              </button>
+              <button class="btn btn-basic flex gap-[10px]">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.0508 4.91005C18.1338 3.98416 17.0418 3.25002 15.8383 2.75042C14.6348 2.25081 13.3439 1.99574 12.0408 2.00005C6.58078 2.00005 2.13078 6.45005 2.13078 11.9101C2.13078 13.6601 2.59078 15.3601 3.45078 16.8601L2.05078 22.0001L7.30078 20.6201C8.75078 21.4101 10.3808 21.8301 12.0408 21.8301C17.5008 21.8301 21.9508 17.3801 21.9508 11.9201C21.9508 9.27005 20.9208 6.78005 19.0508 4.91005ZM12.0408 20.1501C10.5608 20.1501 9.11078 19.7501 7.84078 19.0001L7.54078 18.8201L4.42078 19.6401L5.25078 16.6001L5.05078 16.2901C4.22833 14.9771 3.79171 13.4593 3.79078 11.9101C3.79078 7.37005 7.49078 3.67005 12.0308 3.67005C14.2308 3.67005 16.3008 4.53005 17.8508 6.09005C18.6184 6.85392 19.2267 7.7626 19.6404 8.76338C20.0541 9.76417 20.265 10.8371 20.2608 11.9201C20.2808 16.4601 16.5808 20.1501 12.0408 20.1501ZM16.5608 13.9901C16.3108 13.8701 15.0908 13.2701 14.8708 13.1801C14.6408 13.1001 14.4808 13.0601 14.3108 13.3001C14.1408 13.5501 13.6708 14.1101 13.5308 14.2701C13.3908 14.4401 13.2408 14.4601 12.9908 14.3301C12.7408 14.2101 11.9408 13.9401 11.0008 13.1001C10.2608 12.4401 9.77078 11.6301 9.62078 11.3801C9.48078 11.1301 9.60078 11.0001 9.73078 10.8701C9.84078 10.7601 9.98078 10.5801 10.1008 10.4401C10.2208 10.3001 10.2708 10.1901 10.3508 10.0301C10.4308 9.86005 10.3908 9.72005 10.3308 9.60005C10.2708 9.48005 9.77078 8.26005 9.57078 7.76005C9.37078 7.28005 9.16078 7.34005 9.01078 7.33005H8.53078C8.36078 7.33005 8.10078 7.39005 7.87078 7.64005C7.65078 7.89005 7.01078 8.49005 7.01078 9.71005C7.01078 10.9301 7.90078 12.1101 8.02078 12.2701C8.14078 12.4401 9.77078 14.9401 12.2508 16.0101C12.8408 16.2701 13.3008 16.4201 13.6608 16.5301C14.2508 16.7201 14.7908 16.6901 15.2208 16.6301C15.7008 16.5601 16.6908 16.0301 16.8908 15.4501C17.1008 14.8701 17.1008 14.3801 17.0308 14.2701C16.9608 14.1601 16.8108 14.1101 16.5608 13.9901Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <p>WhatsApp Us</p>
+              </button>
+            </div>
+          </div>
+          <!-- right image  -->
+          <div class="w-full justify-center items-center flex gap-4">
+            <div class="mt-7 relative flex flex-col gap-4 items-end">
+              <div class="w-24 h-14 bg-blue-400/50"></div>
+              <img
+                class="w-48 h-72 object-cover"
+                src="assets/82b37d5ffa13c74a67f34cc333c302bba39191ad.jpg"
+              />
+            </div>
+            <div class="mb-7 relative flex flex-col gap-4 items-start">
+              <img
+                class="w-64 h-60 object-cover"
+                src="assets/e4d2f40431e2e5529ab2bfee6ca016746b936072.jpg"
+              />
+              <div class="w-44 h-28 bg-cyan-800/10"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ✅ Contact Section -->
-    <section id="contact" class="py-20 px-6 md:px-20 bg-blue-50 text-center">
-      <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
-      <form class="max-w-xl mx-auto flex flex-col gap-4">
-        <input
-          type="text"
-          placeholder="Your Name"
-          class="p-3 rounded border border-gray-300"
-        />
-        <input
-          type="email"
-          placeholder="Your Email"
-          class="p-3 rounded border border-gray-300"
-        />
-        <textarea
-          placeholder="Message"
-          class="p-3 rounded border border-gray-300"
-        ></textarea>
-        <button
-          class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
+    <!-- what we offer section  -->
+    <section id="whatWeOffer" class="bg-white">
+      <div class="max-w-[1440px] mx-auto">
+        <div
+          class="flex flex-col justify-start items-center gap-8 md:gap-12 px-[16px] md:px-[60px] py-[48px] md:py-[100px]"
         >
-          Send
-        </button>
-      </form>
+          <!-- header text  -->
+          <div class="flex flex-col justify-start items-center gap-4">
+            <span
+              class="text-neutral-800 text-4xl font-bold font-Montserrat leading-[48px]"
+            >
+              What We Offer
+            </span>
+            <span
+              class="text-center text-neutral-600 text-lg font-medium font-Montserrat leading-relaxed"
+            >
+              JP AEROSPARES supplies certified parts for business jets and
+              commercial aircraft, focused on clients in Peru and Colombia
+            </span>
+          </div>
+          <!-- cards  -->
+          <div class="w-full flex flex-col md:flex-row gap-6">
+            <div
+              class="w-full bg-indigo-950 text-white flex flex-col items-center gap-8 px-8 md:px-6 py-14 md:py-10"
+            >
+              <div class="p-2 bg-white/20 rounded-lg">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M32 15V21C32 21.5304 31.7893 22.0391 31.4142 22.4142C31.0391 22.7893 30.5304 23 30 23H28.4137L24 27.4137C23.815 27.6003 23.5947 27.7482 23.352 27.8488C23.1093 27.9494 22.849 28.0008 22.5863 28H12.9137C12.651 28.0008 12.3907 27.9494 12.148 27.8488C11.9053 27.7482 11.685 27.6003 11.5 27.4137L6.58625 22.5C6.39972 22.315 6.25184 22.0947 6.1512 21.852C6.05056 21.6093 5.99916 21.349 6 21.0862V18.5H3V21.5C3 21.7652 2.89464 22.0196 2.70711 22.2071C2.51957 22.3946 2.26522 22.5 2 22.5C1.73478 22.5 1.48043 22.3946 1.29289 22.2071C1.10536 22.0196 1 21.7652 1 21.5V13.5C1 13.2348 1.10536 12.9804 1.29289 12.7929C1.48043 12.6054 1.73478 12.5 2 12.5C2.26522 12.5 2.51957 12.6054 2.70711 12.7929C2.89464 12.9804 3 13.2348 3 13.5V16.5H6V10C6 9.46957 6.21071 8.96086 6.58579 8.58579C6.96086 8.21071 7.46957 8 8 8H15.5V5H12.5C12.2348 5 11.9804 4.89464 11.7929 4.70711C11.6054 4.51957 11.5 4.26522 11.5 4C11.5 3.73478 11.6054 3.48043 11.7929 3.29289C11.9804 3.10536 12.2348 3 12.5 3H20.5C20.7652 3 21.0196 3.10536 21.2071 3.29289C21.3946 3.48043 21.5 3.73478 21.5 4C21.5 4.26522 21.3946 4.51957 21.2071 4.70711C21.0196 4.89464 20.7652 5 20.5 5H17.5V8H22.5863C22.849 7.99916 23.1093 8.05056 23.352 8.1512C23.5947 8.25184 23.815 8.39972 24 8.58625L28.4137 13H30C30.5304 13 31.0391 13.2107 31.4142 13.5858C31.7893 13.9609 32 14.4696 32 15Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div
+                class="text-center text-white text-lg font-medium font-Montserrat leading-snug"
+              >
+                Rotable and consumables
+              </div>
+            </div>
+            <div
+              class="w-full bg-indigo-950 text-white flex flex-col items-center gap-8 px-8 md:px-6 py-14 md:py-10"
+            >
+              <div class="p-2 bg-white/20 rounded-lg">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.4993 21.9664L20.4993 29.9664H12.4993L16.4993 21.9664ZM12.9961 22.3061C11.0975 21.1313 9.83268 19.0298 9.83268 16.633C9.83268 12.9511 12.8175 9.96635 16.4993 9.96635C20.1812 9.96635 23.166 12.9511 23.166 16.633C23.166 19.0298 21.9012 21.1313 20.0025 22.3061L18.1951 18.6912C18.788 18.2021 19.166 17.4617 19.166 16.633C19.166 15.1602 17.9721 13.9664 16.4993 13.9664C15.0265 13.9664 13.8327 15.1602 13.8327 16.633C13.8327 17.4617 14.2107 18.2021 14.8036 18.6912L12.9961 22.3061ZM10.0081 28.2822C5.9262 26.0029 3.16602 21.6402 3.16602 16.633C3.16602 9.26922 9.13555 3.29968 16.4993 3.29968C23.8631 3.29968 29.8327 9.26922 29.8327 16.633C29.8327 21.6402 27.0725 26.0029 22.9907 28.2822L21.1988 24.6986C23.9704 23.0802 25.8327 20.0741 25.8327 16.633C25.8327 11.4784 21.654 7.29968 16.4993 7.29968C11.3447 7.29968 7.16602 11.4784 7.16602 16.633C7.16602 20.0741 9.02823 23.0802 11.7999 24.6986L10.0081 28.2822Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div
+                class="text-center text-white text-lg font-medium font-Montserrat leading-snug"
+              >
+                Avionics and engine components
+              </div>
+            </div>
+            <div
+              class="w-full bg-indigo-950 text-white flex flex-col items-center gap-8 px-8 md:px-6 py-14 md:py-10"
+            >
+              <div class="p-2 bg-white/20 rounded-lg">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24.5006 25.2998C23.9702 25.2998 23.4615 25.089 23.0864 24.714C22.7114 24.3389 22.5006 23.8302 22.5006 23.2998C22.5006 22.7693 22.7114 22.2606 23.0864 21.8855C23.4615 21.5105 23.9702 21.2998 24.5006 21.2998C25.0311 21.2998 25.5398 21.5105 25.9149 21.8855C26.2899 22.2606 26.5006 22.7693 26.5006 23.2998C26.5006 23.8302 26.2899 24.3389 25.9149 24.714C25.5398 25.089 25.0311 25.2998 24.5006 25.2998ZM26.5006 13.2998L29.114 16.6331H23.1673V13.2998M8.50065 25.2998C7.97022 25.2998 7.46151 25.089 7.08644 24.714C6.71136 24.3389 6.50065 23.8302 6.50065 23.2998C6.50065 22.7693 6.71136 22.2606 7.08644 21.8855C7.46151 21.5105 7.97022 21.2998 8.50065 21.2998C9.03108 21.2998 9.53979 21.5105 9.91486 21.8855C10.2899 22.2606 10.5006 22.7693 10.5006 23.2998C10.5006 23.8302 10.2899 24.3389 9.91486 24.714C9.53979 25.089 9.03108 25.2998 8.50065 25.2998ZM27.1673 11.2998H23.1673V5.96643H4.50065C3.02065 5.96643 1.83398 7.1531 1.83398 8.6331V23.2998H4.50065C4.50065 24.3606 4.92208 25.378 5.67222 26.1282C6.42237 26.8783 7.43978 27.2998 8.50065 27.2998C9.56152 27.2998 10.5789 26.8783 11.3291 26.1282C12.0792 25.378 12.5006 24.3606 12.5006 23.2998H20.5006C20.5006 24.3606 20.9221 25.378 21.6722 26.1282C22.4224 26.8783 23.4398 27.2998 24.5006 27.2998C25.5615 27.2998 26.5789 26.8783 27.3291 26.1282C28.0792 25.378 28.5006 24.3606 28.5006 23.2998H31.1673V16.6331L27.1673 11.2998Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div
+                class="text-center text-white text-lg font-medium font-Montserrat leading-snug"
+              >
+                Spare parts on demand
+              </div>
+            </div>
+            <div
+              class="w-full bg-indigo-950 text-white flex flex-col items-center gap-8 px-8 md:px-6 py-14 md:py-10"
+            >
+              <div class="p-2 bg-white/20 rounded-lg">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M27.912 5.84648C28.6986 6.63315 28.6986 7.89981 27.912 8.67315L22.7253 13.8598L25.552 26.1131L23.672 28.0065L18.4986 18.0998L13.2986 23.2998L13.7786 26.5931L12.352 28.0065L10.0053 23.7665L5.75195 21.4065L7.16529 19.9665L10.4986 20.4598L15.6586 15.2998L5.75195 10.0865L7.64529 8.20648L19.8986 11.0331L25.0853 5.84648C25.832 5.07315 27.1653 5.07315 27.912 5.84648Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div
+                class="text-center text-white text-lg font-medium font-Montserrat leading-snug"
+              >
+                For Airbus, Cessna, Beechcraft, and more
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- why choose JP  -->
+    <section id="whyChooseJP" class="bg-gray-100">
+      <div class="max-w-[1440px] mx-auto">
+        <div
+          class="flex flex-col-reverse md:flex-row justify-center items-center gap-12 md:gap-[60px] px-[16px] md:px-[60px] py-[48px] md:py-[100px]"
+        >
+          <!-- left images  -->
+          <div class="justify-center items-center w-full flex gap-4">
+            <img
+              class="w-full max-w-40 md:max-w-72 h-72 md:h-[512px] object-cover mb-7"
+              src="assets/whyImage1.png"
+            />
+            <img
+              class="w-full max-w-40 md:max-w-72 h-72 md:h-[512px] object-cover mt-7"
+              src="assets/whyImage2.png"
+            />
+          </div>
+          <!-- right text points  -->
+          <div
+            class="justify-start items-start w-full flex flex-col gap-8 md:gap-10"
+          >
+            <span
+              class="text-neutral-800 text-4xl font-bold font-Montserrat leading-[48px]"
+              >Why Choose JP AEROSPARES</span
+            >
+            <div class="flex flex-col gap-6">
+              <div id="why-1" class="flex justify-start gap-6">
+                <div class="p-2 w-fit h-10 bg-indigo-950/10 rounded-lg">
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.5 21.5V9.5H8V21.5H2.5ZM9.75 21.5V3.5H15.25V21.5H9.75ZM17 21.5V11.5H22.5V21.5H17Z"
+                      fill="#0F1053"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-neutral-600 text-lg font-medium font-Montserrat leading-relaxed"
+                >
+                  Veteran-Led Expertise - Founded and led by a retired pilot
+                  with firstland knowledge of aircraft performance and
+                  maintenance service
+                </p>
+              </div>
+              <div id="why-2" class="flex justify-start gap-6">
+                <div class="p-2 w-fit h-10 bg-indigo-950/10 rounded-lg">
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.5 2.75C7.115 2.75 2.75 7.115 2.75 12.5C2.75 17.885 7.115 22.25 12.5 22.25C17.885 22.25 22.25 17.885 22.25 12.5C22.25 7.115 17.885 2.75 12.5 2.75ZM13.25 6.5C13.25 6.30109 13.171 6.11032 13.0303 5.96967C12.8897 5.82902 12.6989 5.75 12.5 5.75C12.3011 5.75 12.1103 5.82902 11.9697 5.96967C11.829 6.11032 11.75 6.30109 11.75 6.5V12.5C11.75 12.914 12.086 13.25 12.5 13.25H17C17.1989 13.25 17.3897 13.171 17.5303 13.0303C17.671 12.8897 17.75 12.6989 17.75 12.5C17.75 12.3011 17.671 12.1103 17.5303 11.9697C17.3897 11.829 17.1989 11.75 17 11.75H13.25V6.5Z"
+                      fill="#0F1053"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-neutral-600 text-lg font-medium font-Montserrat leading-relaxed"
+                >
+                  Speed & Transparency: Fast turnaround and personalized service
+                </p>
+              </div>
+              <div id="why-3" class="flex justify-start gap-6">
+                <div class="p-2 w-fit h-10 bg-indigo-950/10 rounded-lg">
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21.5 11.5325H13.7825C13.6625 11.5325 13.5425 11.555 13.43 11.57C13.445 11.4575 13.4675 11.3375 13.4675 11.2175V3.5C13.4675 2.2625 12.455 1.25 11.2175 1.25H3.5C2.2625 1.25 1.25 2.2625 1.25 3.5V11.2175C1.25 12.455 2.2625 13.4675 3.5 13.4675H11.2175C11.3375 13.4675 11.4575 13.445 11.57 13.43C11.555 13.5425 11.5325 13.6625 11.5325 13.7825V21.5C11.5325 22.7375 12.545 23.75 13.7825 23.75H21.5C22.7375 23.75 23.75 22.7375 23.75 21.5V13.7825C23.75 12.545 22.7375 11.5325 21.5 11.5325ZM10.235 5.945H9.4325C9.2975 6.5525 8.99 7.4825 8.315 8.4725C8.765 8.9525 9.335 9.4175 10.055 9.8375C10.1989 9.91976 10.3115 10.0473 10.3753 10.2003C10.4391 10.3533 10.4505 10.5231 10.4077 10.6832C10.3648 10.8433 10.2702 10.9847 10.1386 11.0855C10.007 11.1862 9.84574 11.2405 9.68 11.24C9.5525 11.24 9.425 11.2025 9.305 11.135C8.59154 10.7264 7.93576 10.2245 7.355 9.6425C6.8375 10.1675 6.2 10.6775 5.405 11.135C5.2925 11.2025 5.1575 11.24 5.03 11.24C4.89896 11.24 4.77026 11.2053 4.65698 11.1394C4.54369 11.0735 4.44986 10.9789 4.385 10.865C4.3349 10.7799 4.30214 10.6857 4.2886 10.5879C4.27505 10.4901 4.281 10.3906 4.3061 10.295C4.3312 10.1995 4.37495 10.1099 4.43483 10.0314C4.49471 9.95288 4.56954 9.88698 4.655 9.8375C5.3825 9.4175 5.945 8.9525 6.395 8.4725C5.7275 7.4825 5.42 6.5525 5.2775 5.945H4.475C4.0625 5.945 3.725 5.615 3.725 5.195C3.725 4.7825 4.0625 4.445 4.475 4.445H6.605V3.9875C6.605 3.575 6.9425 3.2375 7.355 3.2375C7.775 3.2375 8.105 3.575 8.105 3.9875V4.445H10.235C10.6475 4.445 10.985 4.7825 10.985 5.195C10.985 5.615 10.6475 5.945 10.235 5.945ZM20.9675 21.0575C20.8805 21.1048 20.7849 21.1344 20.6863 21.1446C20.5878 21.1547 20.4882 21.1452 20.3933 21.1166C20.2985 21.088 20.2102 21.0409 20.1337 20.978C20.0572 20.915 19.9939 20.8376 19.9475 20.75L19.0475 19.085H16.235L15.335 20.75C15.14 21.1175 14.6825 21.2525 14.3225 21.0575C14.2356 21.0114 14.1587 20.9486 14.0962 20.8727C14.0337 20.7968 13.9868 20.7093 13.9583 20.6152C13.9297 20.5211 13.92 20.4223 13.9297 20.3244C13.9395 20.2266 13.9684 20.1316 14.015 20.045L16.655 15.1475C16.85 14.78 17.225 14.555 17.645 14.555C18.0575 14.555 18.44 14.78 18.635 15.1475L21.2675 20.045C21.3611 20.2192 21.3821 20.4234 21.3259 20.613C21.2697 20.8026 21.1409 20.9624 20.9675 21.0575Z"
+                      fill="#0F1053"
+                    />
+                    <path
+                      d="M7.355 7.19C7.625 6.725 7.79 6.29 7.8875 5.945H6.8225C6.9275 6.29 7.0925 6.725 7.355 7.19ZM17.045 17.585H18.245L17.645 16.4675L17.045 17.585ZM20 10.5988C20.1989 10.5988 20.3897 10.5197 20.5303 10.3791C20.671 10.2384 20.75 10.0477 20.75 9.84875V5.75C20.75 4.92275 20.0773 4.25 19.25 4.25H15.152C14.9531 4.25 14.7623 4.32902 14.6217 4.46967C14.481 4.61032 14.402 4.80109 14.402 5C14.402 5.19891 14.481 5.38968 14.6217 5.53033C14.7623 5.67098 14.9531 5.75 15.152 5.75H19.25V9.84875C19.25 10.0477 19.329 10.2384 19.4697 10.3791C19.6103 10.5197 19.8011 10.5988 20 10.5988ZM5 14.4012C4.80109 14.4012 4.61032 14.4803 4.46967 14.6209C4.32902 14.7616 4.25 14.9523 4.25 15.1512V19.25C4.25 20.0773 4.92275 20.75 5.75 20.75H9.848C10.0469 20.75 10.2377 20.671 10.3783 20.5303C10.519 20.3897 10.598 20.1989 10.598 20C10.598 19.8011 10.519 19.6103 10.3783 19.4697C10.2377 19.329 10.0469 19.25 9.848 19.25H5.75V15.1512C5.75 14.9523 5.67098 14.7616 5.53033 14.6209C5.38968 14.4803 5.19891 14.4012 5 14.4012Z"
+                      fill="#0F1053"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-neutral-600 text-lg font-medium font-Montserrat leading-relaxed"
+                >
+                  Bilingual support (English & Spanish)
+                </p>
+              </div>
+              <div id="why-4" class="flex justify-start gap-6">
+                <div class="p-2 w-fit h-10 bg-indigo-950/10 rounded-lg">
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 5.75C8 4.95435 8.31607 4.19129 8.87868 3.62868C9.44129 3.06607 10.2044 2.75 11 2.75H14C14.7956 2.75 15.5587 3.06607 16.1213 3.62868C16.6839 4.19129 17 4.95435 17 5.75V5.955C17.933 6.04 18.857 6.152 19.774 6.289C21.228 6.507 22.25 7.772 22.25 9.206V12.239C22.25 13.45 21.516 14.591 20.314 14.991C17.7938 15.8275 15.1554 16.2526 12.5 16.25C9.77 16.25 7.143 15.808 4.686 14.991C3.484 14.591 2.75 13.45 2.75 12.239V9.206C2.75 7.772 3.772 6.506 5.226 6.289C6.14729 6.15122 7.07234 6.03984 8 5.955V5.75ZM15.5 5.75V5.84C13.5018 5.71865 11.4982 5.71865 9.5 5.84V5.75C9.5 5.35218 9.65804 4.97064 9.93934 4.68934C10.2206 4.40804 10.6022 4.25 11 4.25H14C14.3978 4.25 14.7794 4.40804 15.0607 4.68934C15.342 4.97064 15.5 5.35218 15.5 5.75ZM12.5 14C12.6989 14 12.8897 13.921 13.0303 13.7803C13.171 13.6397 13.25 13.4489 13.25 13.25C13.25 13.0511 13.171 12.8603 13.0303 12.7197C12.8897 12.579 12.6989 12.5 12.5 12.5C12.3011 12.5 12.1103 12.579 11.9697 12.7197C11.829 12.8603 11.75 13.0511 11.75 13.25C11.75 13.4489 11.829 13.6397 11.9697 13.7803C12.1103 13.921 12.3011 14 12.5 14Z"
+                      fill="#0F1053"
+                    />
+                    <path
+                      d="M3.5 18.9V16.104C3.72782 16.2287 3.96646 16.3324 4.213 16.414C6.88569 17.3014 9.68385 17.7525 12.5 17.75C15.392 17.75 18.18 17.282 20.787 16.415C21.039 16.331 21.277 16.226 21.5 16.104V18.9C21.5 20.352 20.453 21.628 18.977 21.823C16.857 22.105 14.695 22.25 12.5 22.25C10.334 22.2504 8.17024 22.1078 6.023 21.823C4.547 21.628 3.5 20.352 3.5 18.9Z"
+                      fill="#0F1053"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-neutral-600 text-lg font-medium font-Montserrat leading-relaxed"
+                >
+                  Inventory of high-demand consumables
+                </p>
+              </div>
+              <div id="why-5" class="flex justify-start gap-6">
+                <div class="p-2 w-fit h-10 bg-indigo-950/10 rounded-lg">
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.2202 13.2519C22.3558 11.5298 22.0296 9.80282 21.2752 8.24888C20.0266 9.43527 18.5506 10.3565 16.9362 10.9569C17.066 12.5502 16.9941 14.1536 16.7222 15.7289C18.6867 15.2341 20.5481 14.3955 22.2202 13.2519ZM15.1332 16.0499C15.4526 14.5229 15.5643 12.9598 15.4652 11.4029C14.5132 11.6299 13.5202 11.7499 12.4992 11.7499C11.4782 11.7499 10.4852 11.6299 9.53321 11.4029C9.43645 12.9598 9.54811 14.5226 9.86521 16.0499C11.611 16.3175 13.3874 16.3175 15.1332 16.0499ZM10.2712 17.6189C11.7514 17.794 13.247 17.794 14.7272 17.6189C14.2185 19.2565 13.4675 20.8087 12.4992 22.2239C11.5309 20.8087 10.7799 19.2565 10.2712 17.6189ZM8.27621 15.7299C8.00285 14.154 7.93094 12.5499 8.06221 10.9559C6.44749 10.3556 4.97113 9.43441 3.72221 8.24788C2.96803 9.80221 2.64216 11.5296 2.77821 13.2519C4.45035 14.3955 6.31173 15.2351 8.27621 15.7299ZM21.8552 15.2519C21.3503 16.9628 20.3864 18.5028 19.0681 19.7045C17.7498 20.9063 16.1274 21.724 14.3772 22.0689C15.2537 20.5951 15.9227 19.0075 16.3652 17.3509C18.2947 16.9465 20.1478 16.2383 21.8552 15.2529V15.2519ZM3.14321 15.2519C4.82521 16.2229 6.67321 16.9399 8.63321 17.3509C9.07572 19.0075 9.74469 20.5951 10.6212 22.0689C8.8711 21.7241 7.24885 20.9066 5.93055 19.705C4.61225 18.5034 3.64826 16.9636 3.14321 15.2529V15.2519ZM14.3772 2.92988C16.8549 3.41689 19.0473 4.84571 20.4932 6.91588C19.4259 7.99426 18.1517 8.84595 16.7472 9.41988C16.3688 7.1277 15.565 4.92652 14.3772 2.92988ZM12.4992 2.77588C13.9586 4.90798 14.9175 7.34224 15.3042 9.89688C14.4072 10.1269 13.4672 10.2499 12.4992 10.2499C11.5312 10.2499 10.5912 10.1279 9.69421 9.89688C10.0809 7.34223 11.0398 4.90796 12.4992 2.77588ZM10.6212 2.92988C9.43344 4.92651 8.62962 7.12769 8.25121 9.41988C6.84667 8.84598 5.57252 7.99428 4.50521 6.91588C5.95125 4.84601 8.1436 3.41654 10.6212 2.92988Z"
+                      fill="#0F1053"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-neutral-600 text-lg font-medium font-Montserrat leading-relaxed"
+                >
+                  LATAM-Focused Service - Deep understanding of the Latin
+                  American market's challenges and logistics.
+                </p>
+              </div>
+              <div id="why-6" class="flex justify-start gap-6">
+                <div class="p-2 w-fit h-10 bg-indigo-950/10 rounded-lg">
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.145 21.4099L12.138 21.4069L12.116 21.3949C11.9873 21.3241 11.8596 21.2515 11.733 21.1769C10.2108 20.2724 8.78827 19.2099 7.489 18.0069C5.188 15.8599 2.75 12.6739 2.75 8.74995C2.75 5.82195 5.214 3.49995 8.188 3.49995C9.01475 3.4959 9.83178 3.67829 10.5783 4.03355C11.3249 4.38882 11.9817 4.90782 12.5 5.55195C13.0184 4.90768 13.6754 4.38861 14.4221 4.03334C15.1689 3.67807 15.9861 3.49575 16.813 3.49995C19.786 3.49995 22.25 5.82195 22.25 8.74995C22.25 12.6749 19.812 15.8609 17.511 18.0059C16.2117 19.2089 14.7892 20.2715 13.267 21.1759C13.1404 21.2508 13.0127 21.3238 12.884 21.3949L12.862 21.4069L12.855 21.4109L12.852 21.4119C12.7436 21.4694 12.6227 21.4994 12.5 21.4994C12.3773 21.4994 12.2564 21.4694 12.148 21.4119L12.145 21.4099Z"
+                      fill="#0F1053"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-neutral-600 text-lg font-medium font-Montserrat leading-relaxed"
+                >
+                  Family-Owned Integrity - Personal, responsive, and committed
+                  to long-term relationships.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact  -->
+    <section id="contact" class="">
+      <section id="contact" class="mx-4 sm:mx-auto flex flex-col items-center gap-12 px-4 md:px-[60px] py-8 md:py-[80px] ">
+        <span class="text-neutral-800 text-2xl font-bold font-Montserrat leading-7">Request a Quote</span>     
+         <div class="flex w-full max-w-xl shadow-xl mx-auto  flex-col items-center gap-6 px-4 md:px-[60px] py-8 md:py-[60px]">
+        <form class="w-full flex flex-col gap-4">
+          <div class="flex flex-col md:flex-row gap-[22px]">
+            <div class="w-full flex flex-col gap-2.5">
+              <label
+                for="firstName"
+                class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+                >First Name</label
+              >
+              <input
+                id="firstName"
+                type="text"
+                placeholder="Enter Your First Name"
+                class="p-3 border border-[#030556]"
+              />
+            </div>
+            <div class="w-full flex flex-col gap-2.5">
+              <label
+                for="lastName"
+                class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+                >Last Name</label
+              >
+              <input
+                id="lastName"
+                type="text"
+                placeholder="Enter Your Last Name"
+                class="p-3 border border-[#030556]"
+              />
+            </div>
+          </div>
+
+          <div class="w-full flex flex-col gap-2.5">
+            <label
+              for="companyName"
+              class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+              >Company Name</label
+            >
+            <input
+              id="companyName"
+              type="text"
+              placeholder="Enter Your Company Name"
+              class="p-3 border border-[#030556]"
+            />
+          </div>
+          <div class="flex flex-col md:flex-row gap-[22px]">
+            <div class="w-full flex flex-col gap-2.5">
+              <label
+                for="email"
+                class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+                >Email</label
+              >
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter Your Email"
+                class="p-3 border border-[#030556]"
+              />
+            </div>
+            <div class="w-full flex flex-col gap-2.5">
+              <label
+                for="numberWhatsapp"
+                class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+                >Phone/Whatsapp</label
+              >
+              <input
+                id="numberWhatsapp"
+                type="text"
+                placeholder="Enter Your Phone/Whatsapp"
+                class="p-3 border border-[#030556]"
+              />
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-2.5">
+            <label
+              for="message"
+              class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              placeholder="Enter youe Message"
+              class="p-3 border border-[#030556]"
+            ></textarea>
+          </div>
+          <button class="btn-secondery btn   md:mx-auto">Submit Quote Request</button>
+        </form>
+        <span class="text-center">
+          <span
+            class="text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+            >Prefer WhatsApp? Click </span
+          ><a
+            href="https://www.whatsapp.com"
+            class="text-indigo-950 text-lg font-bold font-Montserrat leading-snug cursor-pointer"
+            >here</a
+          ><span
+            class="text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+          >
+            to message us.</span
+          >
+        </span>
+      </div>
+    </section>
+
+    </section>
+    <!-- ¿Buscas repuestos desde LATAM  -->
+    <section class="bg-indigo-950">
+      <div
+        class="w-full max-w-[1440px] mx-auto px-10 py-12 md:py-[60px] flex flex-col justify-start items-center gap-4"
+      >
+        <div
+          class="text-center text-white text-4xl font-bold font-Montserrat leading-[48px]"
+        >
+          ¿Buscas repuestos desde LATAM
+        </div>
+        <div
+          class="max-w-[758px] text-center text-white/80 text-lg font-normal font-Montserrat leading-relaxed"
+        >
+          Explains that JP AEROSPARES is a trusted U.S .- based supplier who
+          understands the urgency and processes required for LATAM buyers.
+        </div>
+      </div>
+    </section>
+
+    <!-- JP AEROSPARES footer -->
+    <footer class="bg-gray-950">
+      <div
+        class="w-full max-w-[1440px] mx-auto px-14 pt-12 md:pt-[60px] pb-8 flex flex-col justify-start items-center gap-12"
+      >
+        <div class="flex flex-col justify-start items-center gap-8">
+          <span
+            class="justify-start text-white text-2xl md:text-5xl font-normal font-Montserrat leading-7 md:leading-[57.60px]"
+          >
+            JP AEROSPARES
+          </span>
+          <div class="flex flex-col justify-start items-center gap-4">
+            <div class="flex justify-center items-center gap-2.5">
+              <div class="w-6 h-6">
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.5508 5.41005C18.6338 4.48416 17.5418 3.75002 16.3383 3.25042C15.1348 2.75081 13.8439 2.49574 12.5408 2.50005C7.08078 2.50005 2.63078 6.95005 2.63078 12.4101C2.63078 14.1601 3.09078 15.8601 3.95078 17.3601L2.55078 22.5001L7.80078 21.1201C9.25078 21.9101 10.8808 22.3301 12.5408 22.3301C18.0008 22.3301 22.4508 17.8801 22.4508 12.4201C22.4508 9.77005 21.4208 7.28005 19.5508 5.41005ZM12.5408 20.6501C11.0608 20.6501 9.61078 20.2501 8.34078 19.5001L8.04078 19.3201L4.92078 20.1401L5.75078 17.1001L5.55078 16.7901C4.72833 15.4771 4.29171 13.9593 4.29078 12.4101C4.29078 7.87005 7.99078 4.17005 12.5308 4.17005C14.7308 4.17005 16.8008 5.03005 18.3508 6.59005C19.1184 7.35392 19.7267 8.2626 20.1404 9.26338C20.5541 10.2642 20.765 11.3371 20.7608 12.4201C20.7808 16.9601 17.0808 20.6501 12.5408 20.6501ZM17.0608 14.4901C16.8108 14.3701 15.5908 13.7701 15.3708 13.6801C15.1408 13.6001 14.9808 13.5601 14.8108 13.8001C14.6408 14.0501 14.1708 14.6101 14.0308 14.7701C13.8908 14.9401 13.7408 14.9601 13.4908 14.8301C13.2408 14.7101 12.4408 14.4401 11.5008 13.6001C10.7608 12.9401 10.2708 12.1301 10.1208 11.8801C9.98078 11.6301 10.1008 11.5001 10.2308 11.3701C10.3408 11.2601 10.4808 11.0801 10.6008 10.9401C10.7208 10.8001 10.7708 10.6901 10.8508 10.5301C10.9308 10.3601 10.8908 10.2201 10.8308 10.1001C10.7708 9.98005 10.2708 8.76005 10.0708 8.26005C9.87078 7.78005 9.66078 7.84005 9.51078 7.83005H9.03078C8.86078 7.83005 8.60078 7.89005 8.37078 8.14005C8.15078 8.39005 7.51078 8.99005 7.51078 10.2101C7.51078 11.4301 8.40078 12.6101 8.52078 12.7701C8.64078 12.9401 10.2708 15.4401 12.7508 16.5101C13.3408 16.7701 13.8008 16.9201 14.1608 17.0301C14.7508 17.2201 15.2908 17.1901 15.7208 17.1301C16.2008 17.0601 17.1908 16.5301 17.3908 15.9501C17.6008 15.3701 17.6008 14.8801 17.5308 14.7701C17.4608 14.6601 17.3108 14.6101 17.0608 14.4901Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <span
+                class="text-white text-lg font-normal font-Montserrat leading-relaxed"
+                >+1 786 281 9778</span
+              >
+            </div>
+            <div class="flex justify-center items-center gap-2.5">
+              <div class="w-6 h-6">
+                <svg
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.42 2.7868C13.467 2.73773 11.533 2.73773 9.57999 2.7868L9.52182 2.78826C7.997 2.82654 6.77002 2.85735 5.7867 3.0286C4.7572 3.20789 3.92048 3.55177 3.21362 4.26132C2.50971 4.9679 2.16764 5.79259 1.99176 6.8054C1.82429 7.76977 1.79878 8.9668 1.76719 10.4496L1.76593 10.5084C1.74469 11.5047 1.74469 12.4952 1.76594 13.4916L1.76719 13.5503C1.79879 15.0332 1.82429 16.2302 1.99176 17.1946C2.16764 18.2074 2.50972 19.0321 3.21362 19.7386C3.92048 20.4482 4.7572 20.7921 5.7867 20.9714C6.77001 21.1426 7.99697 21.1734 9.52177 21.2117L9.57999 21.2132C11.533 21.2622 13.467 21.2622 15.42 21.2132L15.4782 21.2117C17.003 21.1734 18.23 21.1426 19.2133 20.9714C20.2428 20.7921 21.0795 20.4482 21.7864 19.7386C22.4903 19.0321 22.8324 18.2074 23.0082 17.1946C23.1757 16.2302 23.2012 15.0332 23.2328 13.5503L23.2341 13.4916C23.2553 12.4952 23.2553 11.5047 23.2341 10.5084L23.2328 10.4496C23.2012 8.96682 23.1757 7.76979 23.0082 6.80542C22.8324 5.79261 22.4903 4.96792 21.7864 4.26134C21.0795 3.55179 20.2428 3.20791 19.2133 3.02862C18.23 2.85736 17.003 2.82655 15.4782 2.78827L15.42 2.7868ZM7.88182 7.85452C7.52527 7.64371 7.06533 7.76186 6.85452 8.11841C6.64371 8.47497 6.76186 8.93491 7.11841 9.14572L10.0604 10.8851C10.9313 11.4 11.6827 11.7501 12.5001 11.7501C13.3175 11.7501 14.069 11.4 14.9398 10.8851L17.8818 9.14572C18.2384 8.93491 18.3565 8.47497 18.1457 8.11841C17.9349 7.76186 17.475 7.64371 17.1184 7.85452L14.1764 9.59395C13.332 10.0931 12.8831 10.2501 12.5001 10.2501C12.1171 10.2501 11.6682 10.0931 10.8238 9.59395L7.88182 7.85452Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <span
+                class="text-white text-lg font-normal font-Montserrat leading-relaxed"
+                >sales@jpaerospares.com</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex w-full flex-col justify-start items-center gap-8">
+          <div
+            class="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-white/25"
+          ></div>
+          <div
+            class="text-center justify-start text-white text-lg font-normal font-Montserrat leading-relaxed"
+          >
+            © 2025 JP AEROSPARES. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
