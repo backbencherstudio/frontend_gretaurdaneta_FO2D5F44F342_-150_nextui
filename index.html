@@ -40,7 +40,7 @@
           </li>
           <li>
             <a
-              href="#about"
+              href="#whyChooseJP"
               class="justify-start text-zinc-800/80 text-base font-medium font-Montserrat leading-normal hover:text-indigo-950"
               >About</a
             >
@@ -60,43 +60,68 @@
         <div
           class="flex md:hidden flex justify-between items-center gap-[24px]"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-          >
-            <path
-              d="M21.0008 21.4998L15.8038 16.3028M15.8038 16.3028C17.2104 14.8962 18.0006 12.9885 18.0006 10.9993C18.0006 9.01011 17.2104 7.10238 15.8038 5.69581C14.3972 4.28923 12.4895 3.49902 10.5003 3.49902C8.51108 3.49902 6.60336 4.28923 5.19678 5.69581C3.79021 7.10238 3 9.01011 3 10.9993C3 12.9885 3.79021 14.8962 5.19678 16.3028C6.60336 17.7094 8.51108 18.4996 10.5003 18.4996C12.4895 18.4996 14.3972 17.7094 15.8038 16.3028Z"
-              stroke="#2A2A2A"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-          >
-            <path
-              d="M3 18.5V16.5H21V18.5H3ZM3 13.5V11.5H21V13.5H3ZM3 8.5V6.5H21V8.5H3Z"
-              fill="#2A2A2A"
-            />
-          </svg>
+          <div class="cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              id="search-icon"
+            >
+              <path
+                d="M21.0008 21.4998L15.8038 16.3028M15.8038 16.3028C17.2104 14.8962 18.0006 12.9885 18.0006 10.9993C18.0006 9.01011 17.2104 7.10238 15.8038 5.69581C14.3972 4.28923 12.4895 3.49902 10.5003 3.49902C8.51108 3.49902 6.60336 4.28923 5.19678 5.69581C3.79021 7.10238 3 9.01011 3 10.9993C3 12.9885 3.79021 14.8962 5.19678 16.3028C6.60336 17.7094 8.51108 18.4996 10.5003 18.4996C12.4895 18.4996 14.3972 17.7094 15.8038 16.3028Z"
+                stroke="#2A2A2A"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              id="hamburger-icon"
+            >
+              <path
+                d="M3 18.5V16.5H21V18.5H3ZM3 13.5V11.5H21V13.5H3ZM3 8.5V6.5H21V8.5H3Z"
+                fill="#2A2A2A"
+              />
+            </svg>
+          </div>
         </div>
         <div
-          class="hidden absolute z-50 right-0 top-0 h-screen w-screen bg-[#0F10537A]"
+          id="nav-slide"
+          class="flex md:hidden fixed overflow z-50 right-0 top-0 h-screen w-screen bg-[#0F10537A] justify-end"
         >
           <div
-            class="flex md:hidden flex-col gap-[48px] absolute z-50 right-0 top-0 h-screen w-[75%] p-5 rounded-xl bg-white items-center"
+          id="nav-list"
+            class="flex md:hidden flex-col gap-[48px] w-[75%] p-5 rounded-xl bg-white items-center"
           >
-            <ul
-              class="flex gap-[24px] md:flex-row flex-col items-center mt-[69px]"
-            >
+            <div class="absolute right-5 top-7">
+              <svg
+                width="15"
+                height="14"
+                viewBox="0 0 15 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="cursor-pointer"
+                id="close-icon"
+              >
+                <path
+                  d="M13.75 1L1.25084 12.9992M13.7492 13L1.25 1.00085"
+                  stroke="#141B34"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul class="flex gap-[24px] md:flex-row  mt-[59px] flex-col items-center">
               <li>
                 <a
                   href="#"
@@ -134,6 +159,50 @@
         </div>
       </nav>
     </section>
+    <script>
+      // Get the hamburger icon, close icon, nav menu, and links inside nav
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const closeIcon = document.getElementById("close-icon");
+      const navMenu = document.getElementById("nav-slide");
+      const navOffside = document.getElementById("nav-list");
+      const links = document.querySelectorAll("#nav-slide a"); // Get all the links inside nav-slide
+
+      // Show the nav menu when the hamburger icon is clicked
+      hamburgerIcon.addEventListener("click", () => {
+        navMenu.classList.remove("hidden"); // Show the menu
+        hamburgerIcon.classList.add("hidden"); // Hide the hamburger icon
+        closeIcon.classList.remove("hidden"); // Show the close icon
+         document.body.classList.add("overflow"); // Disable scrolling
+      });
+
+      // Hide the nav menu when the close icon is clicked
+      closeIcon.addEventListener("click", () => {
+        navMenu.classList.add("hidden"); // Hide the menu
+        hamburgerIcon.classList.remove("hidden"); // Show the hamburger icon
+        closeIcon.classList.add("hidden"); // Hide the close icon
+      });
+
+      // Hide the nav menu when a link is clicked inside the nav menu
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.add("hidden"); // Hide the menu
+          hamburgerIcon.classList.remove("hidden"); // Show the hamburger icon
+          closeIcon.classList.add("hidden"); // Hide the close icon
+        });
+      });
+
+      // Close the nav menu when clicking outside of it
+      document.addEventListener("click", (event) => {
+        if (
+          !navOffside.contains(event.target) &&
+          !hamburgerIcon.contains(event.target)
+        ) {
+          navMenu.classList.add("hidden"); // Hide the menu
+          hamburgerIcon.classList.remove("hidden"); // Show the hamburger icon
+          closeIcon.classList.add("hidden"); // Hide the close icon
+        }
+      });
+    </script>
 
     <!-- ✅ Hero Section -->
     <section id="hero" class="bg-white">
@@ -175,16 +244,18 @@
           </div>
           <!-- right image  -->
           <div class="w-full justify-center items-center flex gap-4">
-            <div class="mt-7 relative flex flex-col gap-4 items-end">
+            <div class="mt-7 flex flex-col gap-4 items-end">
               <div class="w-24 h-14 bg-blue-400/50"></div>
               <img
                 class="w-48 h-72 object-cover"
+                loading="lazy"
                 src="assets/82b37d5ffa13c74a67f34cc333c302bba39191ad.jpg"
               />
             </div>
-            <div class="mb-7 relative flex flex-col gap-4 items-start">
+            <div class="mb-7 flex flex-col gap-4 items-start">
               <img
                 class="w-64 h-60 object-cover"
+                loading="lazy"
                 src="assets/e4d2f40431e2e5529ab2bfee6ca016746b936072.jpg"
               />
               <div class="w-44 h-28 bg-cyan-800/10"></div>
@@ -323,10 +394,12 @@
           <div class="justify-center items-center w-full flex gap-4">
             <img
               class="w-full max-w-40 md:max-w-72 h-72 md:h-[512px] object-cover mb-7"
+              loading="lazy"
               src="assets/whyImage1.png"
             />
             <img
               class="w-full max-w-40 md:max-w-72 h-72 md:h-[512px] object-cover mt-7"
+              loading="lazy"
               src="assets/whyImage2.png"
             />
           </div>
@@ -489,111 +562,120 @@
 
     <!-- contact  -->
     <section id="contact" class="">
-      <section id="contact" class="mx-4 sm:mx-auto flex flex-col items-center gap-12 px-4 md:px-[60px] py-8 md:py-[80px] ">
-        <span class="text-neutral-800 text-2xl font-bold font-Montserrat leading-7">Request a Quote</span>     
-         <div class="flex w-full max-w-xl shadow-xl mx-auto  flex-col items-center gap-6 px-4 md:px-[60px] py-8 md:py-[60px]">
-        <form class="w-full flex flex-col gap-4">
-          <div class="flex flex-col md:flex-row gap-[22px]">
-            <div class="w-full flex flex-col gap-2.5">
-              <label
-                for="firstName"
-                class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
-                >First Name</label
-              >
-              <input
-                id="firstName"
-                type="text"
-                placeholder="Enter Your First Name"
-                class="p-3 border border-[#030556]"
-              />
+      <section
+        id="contact"
+        class="mx-4 sm:mx-auto flex flex-col items-center gap-12 px-4 md:px-[60px] py-8 md:py-[80px]"
+      >
+        <span
+          class="text-neutral-800 text-2xl md:text-4xl font-bold font-Montserrat leading-7 md:leading-[48px]"
+          >Request a Quote</span
+        >
+        <div
+          class="flex w-full max-w-xl shadow-xl mx-auto flex-col items-center gap-6 px-4 md:px-[60px] py-8 md:py-[60px]"
+        >
+          <form class="w-full flex flex-col gap-4">
+            <div class="flex flex-col md:flex-row gap-4 md:gap-[22px]">
+              <div class="w-full flex flex-col gap-2.5">
+                <label
+                  for="firstName"
+                  class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+                  >First Name</label
+                >
+                <input
+                  id="firstName"
+                  type="text"
+                  placeholder="Enter Your First Name"
+                  class="p-3 border border-[#030556]"
+                />
+              </div>
+              <div class="w-full flex flex-col gap-2.5">
+                <label
+                  for="lastName"
+                  class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+                  >Last Name</label
+                >
+                <input
+                  id="lastName"
+                  type="text"
+                  placeholder="Enter Your Last Name"
+                  class="p-3 border border-[#030556]"
+                />
+              </div>
             </div>
-            <div class="w-full flex flex-col gap-2.5">
-              <label
-                for="lastName"
-                class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
-                >Last Name</label
-              >
-              <input
-                id="lastName"
-                type="text"
-                placeholder="Enter Your Last Name"
-                class="p-3 border border-[#030556]"
-              />
-            </div>
-          </div>
 
-          <div class="w-full flex flex-col gap-2.5">
-            <label
-              for="companyName"
-              class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
-              >Company Name</label
-            >
-            <input
-              id="companyName"
-              type="text"
-              placeholder="Enter Your Company Name"
-              class="p-3 border border-[#030556]"
-            />
-          </div>
-          <div class="flex flex-col md:flex-row gap-[22px]">
             <div class="w-full flex flex-col gap-2.5">
               <label
-                for="email"
+                for="companyName"
                 class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
-                >Email</label
+                >Company Name</label
               >
               <input
-                id="email"
-                type="email"
-                placeholder="Enter Your Email"
-                class="p-3 border border-[#030556]"
-              />
-            </div>
-            <div class="w-full flex flex-col gap-2.5">
-              <label
-                for="numberWhatsapp"
-                class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
-                >Phone/Whatsapp</label
-              >
-              <input
-                id="numberWhatsapp"
+                id="companyName"
                 type="text"
-                placeholder="Enter Your Phone/Whatsapp"
+                placeholder="Enter Your Company Name"
                 class="p-3 border border-[#030556]"
               />
             </div>
-          </div>
-          <div class="w-full flex flex-col gap-2.5">
-            <label
-              for="message"
-              class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
-              >Message</label
+            <div class="flex flex-col md:flex-row gap-4 md:gap-[22px]">
+              <div class="w-full flex flex-col gap-2.5">
+                <label
+                  for="email"
+                  class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+                  >Email</label
+                >
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Enter Your Email"
+                  class="p-3 border border-[#030556]"
+                />
+              </div>
+              <div class="w-full flex flex-col gap-2.5">
+                <label
+                  for="numberWhatsapp"
+                  class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+                  >Phone/Whatsapp</label
+                >
+                <input
+                  id="numberWhatsapp"
+                  type="text"
+                  placeholder="Enter Your Phone/Whatsapp"
+                  class="p-3 border border-[#030556]"
+                />
+              </div>
+            </div>
+            <div class="w-full flex flex-col gap-2.5">
+              <label
+                for="message"
+                class="text-start text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                placeholder="Enter youe Message"
+                class="p-3 border border-[#030556]"
+              ></textarea>
+            </div>
+            <button class="btn-secondery btn mt-6 md:mx-auto">
+              Submit Quote Request
+            </button>
+          </form>
+          <span class="text-center">
+            <span
+              class="text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
+              >Prefer WhatsApp? Click </span
+            ><a
+              href="https://www.whatsapp.com"
+              class="text-indigo-950 text-lg font-bold font-Montserrat leading-snug cursor-pointer"
+              >here</a
+            ><span
+              class="text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
             >
-            <textarea
-              id="message"
-              placeholder="Enter youe Message"
-              class="p-3 border border-[#030556]"
-            ></textarea>
-          </div>
-          <button class="btn-secondery btn   md:mx-auto">Submit Quote Request</button>
-        </form>
-        <span class="text-center">
-          <span
-            class="text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
-            >Prefer WhatsApp? Click </span
-          ><a
-            href="https://www.whatsapp.com"
-            class="text-indigo-950 text-lg font-bold font-Montserrat leading-snug cursor-pointer"
-            >here</a
-          ><span
-            class="text-zinc-800 text-lg font-medium font-Montserrat leading-snug"
-          >
-            to message us.</span
-          >
-        </span>
-      </div>
-    </section>
-
+              to message us.</span
+            >
+          </span>
+        </div>
+      </section>
     </section>
     <!-- ¿Buscas repuestos desde LATAM  -->
     <section class="bg-indigo-950">
@@ -617,7 +699,7 @@
     <!-- JP AEROSPARES footer -->
     <footer class="bg-gray-950">
       <div
-        class="w-full max-w-[1440px] mx-auto px-14 pt-12 md:pt-[60px] pb-8 flex flex-col justify-start items-center gap-12"
+        class="w-full mx-auto px-14 pt-12 md:pt-[60px] pb-8 flex flex-col justify-start items-center gap-12"
       >
         <div class="flex flex-col justify-start items-center gap-8">
           <span
