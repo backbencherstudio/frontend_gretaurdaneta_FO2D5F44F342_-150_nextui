@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .theme-text {
   color: #0f1053;
@@ -26,7 +39,7 @@
 
 .btn-basic:hover {
   background: #1e40af;
-  color: aqua;
+  color: rgb(0, 255, 21);
 }
 .btn-secondery {
   background: #0f1053;

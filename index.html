@@ -13,6 +13,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="text-gray-900">
+    <script>
+  const sections = document.querySelectorAll('section');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Trigger when 50% of the section is in the viewport
+    }
+  );
+
+  sections.forEach(section => {
+    section.classList.add('fade-in'); // Initially add fade-in class
+    observer.observe(section);
+  });
+</script>
+
     <!-- ✅ Navbar -->
     <section id="navbar" class="bg-white">
       <nav
